@@ -1,184 +1,93 @@
 
+body {
+    background-color: #0a0f1a; /* biru dongker tua */
+    color: #f5f6fa;
+}
+
+.navbar, .navbar-dark.bg-dark {
+    background-color: #101c2c !important; /* biru dongker lebih terang */
+}
+
+.navbar .navbar-brand, .navbar .nav-link {
+    color: #f5f6fa !important;
+}
+
+.navbar .nav-link.active, .navbar .nav-link:focus, .navbar .nav-link:hover {
+    color: #1e90ff !important; /* biru terang untuk hover */
+}
+
 .banner {
-    position: relative;
-    background-image: url('/img/Foto Bersama.png') ;
-    background-size: cover;
-    padding-top: 56.25%;
-    color: #fff;
+    background-color: #101c2c;
+    background-image: none;
 }
 
-.banner-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.display-3, h2, h3, h4, h5, h6 {
+    color: #1e90ff;
 }
 
-.custom-brand {
-    font-style: italic;
-    font-weight: bold;
+.card {
+    background-color: #181f2f;
+    color: #f5f6fa;
+    border: 1px solid #1e90ff;
 }
 
-.container-fluid {
-    padding-top: auto;
-    padding-bottom: auto;
+.card-title {
+    color: #1e90ff;
 }
 
-.display-3 {
-    font-size: 3rem;
-    font-weight: bold;
-    opacity: 0;
-    transform: translateY(-20px);
-    animation: fadeInUp 1s forwards;
-}
-.text-center {
-    text-align: center;
+.card-body {
+    background-color: #181f2f;
 }
 
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-.float-md-end {
-    float: right;
-}
-.crop-img {
-    transition: transform 0.5s, box-shadow 0.5s;
-    object-fit: cover; /* Memastikan gambar terpotong dengan baik */
-}
-.crop-img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
-    
-}
-p {
-    transition: color 0.5s, background-color 0.5s, transform 0.5s;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 1s forwards;
-}
-p:hover {
-    color: #007BFF;
-    background-color: transparent;
-    transform: scale(1.05);
-}
-/* Animasi fadeInUp */
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.btn, .btn-primary, .btn-link {
+    background-color: #1e90ff !important;
+    color: #fff !important;
+    border: none;
 }
 
-/* Animasi fadeInUp */
-.tim {
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-.tim:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+.btn-link {
+    background: none !important;
+    color: #1e90ff !important;
 }
 
-.profil-highlight {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.btn-link:hover, .btn-link:focus {
+    color: #fff !important;
+    background-color: #1e90ff !important;
 }
 
-.profil-highlight:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-.lingkaran {
-    display: inline-block;
-    border-radius: 50%;
-    width: 150px;
-    margin: auto;
-    height: 150px;
-    color: #fff;
-    background-color: #dc3545;
-}
-
-.lingkaran i {
-    position: relative;
-    top: 30px;
-}
-
-.crop-img {
-    object-fit: cover;
-}
-
-.tim img {
-    width: 250px;
-    border: 10px solid #cccccc;
-}
-
-
-a.social {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    color: #fff;
-    border-radius: 50%;
-    background-color: #333;
-    line-height: 40px;
-}
-
-.client img {
-    height: auto;
-    max-height: 50px;
+.bg-light, .container-fluid.bg-light {
+    background-color: #101c2c !important;
 }
 
 .kontak {
-    background: url("https://wallpaperaccess.com/full/1867010.jpg") no-repeat
-        center center;
-    background-size: flex;
-    padding-bottom: 20%;
-    padding-top: 20%;
-    color: #fff;
-    
+    background: #0a0f1a !important;
+    color: #f5f6fa;
 }
 
-.social-link img {
-    transition: transform 0.3s;
+.social-link a {
+    color: #1e90ff !important;
 }
 
-.social-link img:hover {
-    transform: scale(1.1);
+.social-link a:hover {
+    color: #fff !important;
 }
 
-.kontak p {
-    font-size: 1.2rem;
+footer, .container.text-center.pt-5.pb-5 {
+    background-color: #101c2c;
+    color: #f5f6fa;
 }
 
-.kontak h2 {
-    font-style: oblique;
-}
-.kontak h4 {
-    margin-bottom: 1rem;
-}
-
-
-/* Mobile Devices */
-@media (max-width: 480px) {
-    body {
-        font-size: 55%;
-    }
+input, textarea, select {
+    background-color: #181f2f;
+    color: #f5f6fa;
+    border: 1px solid #1e90ff;
 }
 
-
-/* Tablet */
-@media (min-width: 768px) and (max-width: 1024px) {
-    body {
-        font-size: 62.5%;
-    }
+::-webkit-scrollbar {
+    width: 8px;
+    background: #101c2c;
 }
-
-/* Desktops */
-@media (min-width: 1025px) and (max-width: 1280px) {
-    
+::-webkit-scrollbar-thumb {
+    background: #1e90ff;
+    border-radius: 4px;
 }
