@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Favicon untuk semua device dan browser -->
+         <link rel="icon" type="image/png" sizes="32x32" href="IMG/Logo/logo.png">
+         <link rel="icon" type="image/png" sizes="16x16" href="IMG/Logo/logo.png">
+         <link rel="icon" type="image/x-icon" href="IMG/Logo/logo.png">
+         <link rel="shortcut icon" href="IMG/Logo/logo.png">
+         <!-- Untuk Safari (iOS/iPadOS bookmark icon) -->
+         <link rel="apple-touch-icon" sizes="180x180" href="IMG/Logo/logo.png">
+         <!-- Untuk Android Chrome -->
+         <link rel="icon" type="image/png" sizes="192x192" href="IMG/Logo/logo.png">
+         <link rel="icon" type="image/png" sizes="512x512" href="IMG/Logo/logo.png">
+         <!-- Untuk Windows Tile -->
+         <meta name="msapplication-TileColor" content="#1e90ff">
+         <meta name="msapplication-TileImage" content="IMG/Logo/logo.png">
+         <!-- Manifest (optional, untuk PWA/progressive web app) -->
+         <link rel="manifest" href="IMG/Logo/logo.png">
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Galeri - HMTT TUJ</title>
+        
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+            crossorigin="anonymous"
+        />
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="style.css" />
+
+    </head>
+    <body>
+    <!-- navigasi -->
+    <!-- Tombol hamburger menu -->
+    <button class="hamburger-menu" id="hamburgerMenu" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Offcanvas Sidebar -->
+    <div class="offcanvas-sidebar" id="offcanvasSidebar">
+        <div class="sidebar-header">
+            <div class="d-flex align-items-center">
+                <img src="IMG/Logo/logo.png" width="40" alt="Logo" class="me-3">
+                <h5 class="mb-0">HMTT-TUJ</h5>
+            </div>
+            <button class="close-sidebar" id="closeSidebar" aria-label="Close Menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="sidebar-nav">
+            <ul class="sidebar-menu">
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="index.html#tentang">
+                        <i class="fas fa-info-circle me-3"></i>
+                        About
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="index.html#visimisi">
+                        <i class="fas fa-bullseye me-3"></i>
+                        Visi & Misi
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="index.html#parlemen">
+                        <i class="fas fa-users me-3"></i>
+                        Parlemen
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="index.html#pengurus">
+                        <i class="fas fa-sitemap me-3"></i>
+                        Struktur
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="index.html#kegiatankerja">
+                        <i class="fas fa-calendar-alt me-3"></i>
+                        Kegiatan
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="bank-soal.html">
+                        <i class="fas fa-book me-3"></i>
+                        Bank Soal
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link active" href="galeri.html">
+                        <i class="fas fa-images me-3"></i>
+                        Galeri
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="index.html#kontak">
+                        <i class="fas fa-envelope me-3"></i>
+                        Kontak
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="sidebar-footer">
+            <div class="social-links">
+                <a href="https://www.instagram.com/hmtt_tuj?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com/@hmtt_tuj?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+            <p class="mt-3 mb-0">"Bersama Telco Meraih Tujuan"</p>
+        </div>
+    </div>
+
+    <!-- Overlay untuk menutup sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Hero Section Galeri -->
+    <section id="hero-galeri" class="d-flex flex-column justify-content-center align-items-center text-center" style="min-height: 60vh; position: relative;">
+        <div class="hero-overlay"></div>
+        <div class="container position-relative" style="z-index:2;">
+            <h1 class="display-2 mb-4" data-aos="fade-up">
+                <i class="fas fa-images me-3"></i>
+                Galeri HMTT
+            </h1>
+            <h2 class="display-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                Dokumentasi Kegiatan & Momen Berharga
+            </h2>
+            <p class="lead" data-aos="fade-up" data-aos-delay="200">
+                Kumpulan foto-foto kegiatan dan momen berharga bersama keluarga besar HMTT TUJ
+            </p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="py-4 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <label for="searchGallery" class="form-label">
+                                        <i class="fas fa-search me-2"></i>Cari Foto
+                                    </label>
+                                    <input type="text" class="form-control" id="searchGallery" placeholder="Masukkan kata kunci...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeri Content -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row" id="galleryContainer">
+                <!-- Acara & Kegiatan -->
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 gallery-item" data-title="Expo BTC 2024">
+                    <div class="gallery-card">
+                        <div class="gallery-image" onclick="openGalleryModal('IMG/Acara/ExpoBTC.jpg', 'Expo BTC 2024', 'Kegiatan EXPO-JC 2024')">
+                            <img src="IMG/Acara/ExpoBTC.jpg" class="img-fluid" alt="Expo BTC 2024" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h6 class="gallery-title">Expo BTC 2024</h6>
+                            <p class="gallery-category">Acara & Kegiatan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 gallery-item" data-title="LDKM 2024">
+                    <div class="gallery-card">
+                        <div class="gallery-image" onclick="openGalleryModal('IMG/Acara/FotoBersamaLDKM.jpg', 'LDKM 2024', 'Kegiatan Latihan Dasar Kepemimpinan Mahasiswa Angkatan 2024')">
+                            <img src="IMG/Acara/FotoBersamaLDKM.jpg" class="img-fluid" alt="LDKM 2024" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h6 class="gallery-title">LDKM 2024</h6>
+                            <p class="gallery-category">Acara & Kegiatan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 gallery-item" data-title="Run & Shoot 2025">
+                    <div class="gallery-card">
+                        <div class="gallery-image" onclick="openGalleryModal('IMG/Acara/FotoBersamaRUNSHOOT.jpg', 'Run & Shoot 2025', 'Kegiatan Have Fun Run & Shoot 2025')">
+                            <img src="IMG/Acara/FotoBersamaRUNSHOOT.jpg" class="img-fluid" alt="Run & Shoot 2025" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h6 class="gallery-title">Run & Shoot 2025</h6>
+                            <p class="gallery-category">Acara & Kegiatan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 gallery-item" data-title="Workshop NONAKA">
+                    <div class="gallery-card">
+                        <div class="gallery-image" onclick="openGalleryModal('IMG/Acara/FotoBersamaWorkshopNONAKA.jpg', 'Workshop NONAKA', 'Kegiatan Workshop Networking 2025')">
+                            <img src="IMG/Acara/FotoBersamaWorkshopNONAKA.jpg" class="img-fluid" alt="Workshop NONAKA" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h6 class="gallery-title">Workshop NONAKA</h6>
+                            <p class="gallery-category">Acara & Kegiatan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 gallery-item" data-title="Halal Bihalal 2024">
+                    <div class="gallery-card">
+                        <div class="gallery-image" onclick="openGalleryModal('IMG/Acara/HalalBihalal2024.jpg', 'Halal Bihalal 2024', 'Kegiatan Halal Bihalal 2024')">
+                            <img src="IMG/Acara/HalalBihalal2024.jpg" class="img-fluid" alt="Halal Bihalal 2024" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h6 class="gallery-title">Halal Bihalal 2024</h6>
+                            <p class="gallery-category">Acara & Kegiatan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 gallery-item" data-title="Kunjungan Eksternal">
+                    <div class="gallery-card">
+                        <div class="gallery-image" onclick="openGalleryModal('IMG/Acara/KunjunganEksternal.jpg', 'Kunjungan Eksternal', 'Kegiatan Kunjungan ke Universitas Islam 45 Bekasi')">
+                            <img src="IMG/Acara/KunjunganEksternal.jpg" class="img-fluid" alt="Kunjungan Eksternal" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h6 class="gallery-title">Kunjungan Eksternal</h6>
+                            <p class="gallery-category">Acara & Kegiatan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 gallery-item" data-title="LDKM 2023">
+                    <div class="gallery-card">
+                        <div class="gallery-image" onclick="openGalleryModal('IMG/Acara/LDKM2023.jpg', 'LDKM 2023', 'Kegiatan Latihan Dasar Kepemimpinan Mahasiswa Angkatan 2023')">
+                            <img src="IMG/Acara/LDKM2023.jpg" class="img-fluid" alt="LDKM 2023" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h6 class="gallery-title">LDKM 2023</h6>
+                            <p class="gallery-category">Acara & Kegiatan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 gallery-item" data-title="Mubes AD-ART">
+                    <div class="gallery-card">
+                        <div class="gallery-image" onclick="openGalleryModal('IMG/Acara/MubesAD-ART.jpg', 'Mubes AD-ART', 'Kegiatan Musyawarah Besar AD-ART 2024')">
+                            <img src="IMG/Acara/MubesAD-ART.jpg" class="img-fluid" alt="Mubes AD-ART" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h6 class="gallery-title">Mubes AD-ART</h6>
+                            <p class="gallery-category">Acara & Kegiatan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 gallery-item" data-title="Muswil Eksternal">
+                    <div class="gallery-card">
+                        <div class="gallery-image" onclick="openGalleryModal('IMG/Acara/MuswilEksternal.jpg', 'Muswil Eksternal', 'Kegiatan Musyawarah Wilayah Eksternal')">
+                            <img src="IMG/Acara/MuswilEksternal.jpg" class="img-fluid" alt="Muswil Eksternal" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h6 class="gallery-title">Muswil Eksternal</h6>
+                            <p class="gallery-category">Acara & Kegiatan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 gallery-item" data-title="Muswil">
+                    <div class="gallery-card">
+                        <div class="gallery-image" onclick="openGalleryModal('IMG/Acara/Muswill.png', 'Muswil', 'Kegiatan Musyawarah Wilayah')">
+                            <img src="IMG/Acara/Muswill.png" class="img-fluid" alt="Muswil" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h6 class="gallery-title">Muswil</h6>
+                            <p class="gallery-category">Acara & Kegiatan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 gallery-item" data-title="Seminar Elektro">
+                    <div class="gallery-card">
+                        <div class="gallery-image" onclick="openGalleryModal('IMG/Acara/Seminar Elektro.png', 'Seminar Elektro', 'Kegiatan Seminar Elektro')">
+                            <img src="IMG/Acara/Seminar Elektro.png" class="img-fluid" alt="Seminar Elektro" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h6 class="gallery-title">Seminar Elektro</h6>
+                            <p class="gallery-category">Acara & Kegiatan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 gallery-item" data-title="Seminar Elektro Eksternal">
+                    <div class="gallery-card">
+                        <div class="gallery-image" onclick="openGalleryModal('IMG/Acara/SeminarElektroEksternal.jpg', 'Seminar Elektro Eksternal', 'Kegiatan Seminar Elektro Eksternal')">
+                            <img src="IMG/Acara/SeminarElektroEksternal.jpg" class="img-fluid" alt="Seminar Elektro Eksternal" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h6 class="gallery-title">Seminar Elektro Eksternal</h6>
+                            <p class="gallery-category">Acara & Kegiatan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 gallery-item" data-title="Seminar Nasional Eksternal">
+                    <div class="gallery-card">
+                        <div class="gallery-image" onclick="openGalleryModal('IMG/Acara/SeminarNasionalEksternal.jpg', 'Seminar Nasional Eksternal', 'Kegiatan Seminar Nasional Eksternal')">
+                            <img src="IMG/Acara/SeminarNasionalEksternal.jpg" class="img-fluid" alt="Seminar Nasional Eksternal" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h6 class="gallery-title">Seminar Nasional Eksternal</h6>
+                            <p class="gallery-category">Acara & Kegiatan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 gallery-item" data-title="Sharing Session">
+                    <div class="gallery-card">
+                        <div class="gallery-image" onclick="openGalleryModal('IMG/Acara/SharingSession.jpg', 'Sharing Session', 'Kegiatan Sharing Session')">
+                            <img src="IMG/Acara/SharingSession.jpg" class="img-fluid" alt="Sharing Session" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h6 class="gallery-title">Sharing Session</h6>
+                            <p class="gallery-category">Acara & Kegiatan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 gallery-item" data-title="Studban">
+                    <div class="gallery-card">
+                        <div class="gallery-image" onclick="openGalleryModal('IMG/Acara/Studban.jpg', 'Studban', 'Kegiatan Studban')">
+                            <img src="IMG/Acara/Studban.jpg" class="img-fluid" alt="Studban" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h6 class="gallery-title">Studban</h6>
+                            <p class="gallery-category">Acara & Kegiatan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 gallery-item" data-title="Triwulan 1">
+                    <div class="gallery-card">
+                        <div class="gallery-image" onclick="openGalleryModal('IMG/Acara/Triwulan-1.png', 'Triwulan 1', 'Kegiatan Triwulan 1')">
+                            <img src="IMG/Acara/Triwulan-1.png" class="img-fluid" alt="Triwulan 1" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h6 class="gallery-title">Triwulan 1</h6>
+                            <p class="gallery-category">Acara & Kegiatan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 gallery-item" data-title="Triwulan 1 JPG">
+                    <div class="gallery-card">
+                        <div class="gallery-image" onclick="openGalleryModal('IMG/Acara/Triwulan1.jpg', 'Triwulan 1', 'Kegiatan Triwulan 1')">
+                            <img src="IMG/Acara/Triwulan1.jpg" class="img-fluid" alt="Triwulan 1" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h6 class="gallery-title">Triwulan 1</h6>
+                            <p class="gallery-category">Acara & Kegiatan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 gallery-item" data-title="Workshop IOT">
+                    <div class="gallery-card">
+                        <div class="gallery-image" onclick="openGalleryModal('IMG/Acara/WorkshopIOT.jpg', 'Workshop IOT', 'Kegiatan Workshop Internet of Things')">
+                            <img src="IMG/Acara/WorkshopIOT.jpg" class="img-fluid" alt="Workshop IOT" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h6 class="gallery-title">Workshop IOT</h6>
+                            <p class="gallery-category">Acara & Kegiatan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4 gallery-item" data-title="Foto Bersama">
+                    <div class="gallery-card">
+                        <div class="gallery-image" onclick="openGalleryModal('IMG/Acara/Foto Bersama.jpg', 'Foto Bersama', 'Foto bersama keluarga besar HMTT')">
+                            <img src="IMG/Acara/Foto Bersama.jpg" class="img-fluid" alt="Foto Bersama" loading="lazy">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h6 class="gallery-title">Foto Bersama</h6>
+                            <p class="gallery-category">Acara & Kegiatan</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-5">
+                <button class="btn btn-outline-primary btn-lg" id="loadMoreGalleryBtn">
+                    <i class="fas fa-plus me-2"></i>Muat Lebih Banyak
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Modal -->
+    <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="galleryModalTitle">Judul Foto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="galleryModalImage" src="" class="img-fluid" alt="Gallery Image">
+                    <p id="galleryModalDescription" class="mt-3 text-muted">Deskripsi foto</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                    <button type="button" class="btn btn-primary" onclick="downloadImage()">
+                        <i class="fas fa-download me-2"></i>Download
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container text-center">
+            <img src="IMG/Logo/logo.png" alt="Logo" width="80" class="mb-3">
+            <p><strong>Himpunan Mahasiswa Teknik Telekomunikasi Telkom University Jakarta</strong></p>
+            <p>"Bersama Telco Meraih Tujuan"</p>
+            <div class="mt-3">
+                <a href="index.html" class="btn btn-outline-light btn-sm">
+                    <i class="fas fa-home me-2"></i>Kembali ke Beranda
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"
+    ></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript untuk Galeri -->
+    <script>
+        // Sidebar functionality
+        const hamburgerMenu = document.getElementById('hamburgerMenu');
+        const offcanvasSidebar = document.getElementById('offcanvasSidebar');
+        const sidebarOverlay = document.getElementById('sidebarOverlay');
+        const closeSidebar = document.getElementById('closeSidebar');
+
+        // Open sidebar
+        hamburgerMenu.addEventListener('click', function() {
+            offcanvasSidebar.classList.add('active');
+            sidebarOverlay.classList.add('active');
+            hamburgerMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        // Close sidebar
+        function closeSidebarFunction() {
+            offcanvasSidebar.classList.remove('active');
+            sidebarOverlay.classList.remove('active');
+            hamburgerMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        closeSidebar.addEventListener('click', closeSidebarFunction);
+        sidebarOverlay.addEventListener('click', closeSidebarFunction);
+
+        // Close sidebar with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && offcanvasSidebar.classList.contains('active')) {
+                closeSidebarFunction();
+            }
+        });
+
+        // Gallery functionality
+        const searchGallery = document.getElementById('searchGallery');
+        const galleryContainer = document.getElementById('galleryContainer');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        // Search functionality
+        searchGallery.addEventListener('input', filterGallery);
+
+        function filterGallery() {
+            const searchTerm = searchGallery.value.toLowerCase();
+
+            galleryItems.forEach(item => {
+                const title = item.getAttribute('data-title').toLowerCase();
+                const description = item.querySelector('.gallery-title').textContent.toLowerCase();
+
+                const matchesSearch = searchTerm === '' || title.includes(searchTerm) || description.includes(searchTerm);
+
+                if (matchesSearch) {
+                    item.style.display = 'block';
+                    item.style.animation = 'fadeInUp 0.5s ease forwards';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Gallery modal functionality
+        function openGalleryModal(imageSrc, title, description) {
+            const modal = new bootstrap.Modal(document.getElementById('galleryModal'));
+            document.getElementById('galleryModalImage').src = imageSrc;
+            document.getElementById('galleryModalTitle').textContent = title;
+            document.getElementById('galleryModalDescription').textContent = description;
+            modal.show();
+        }
+
+        // Download image functionality
+        function downloadImage() {
+            const imageSrc = document.getElementById('galleryModalImage').src;
+            const link = document.createElement('a');
+            link.href = imageSrc;
+            link.download = document.getElementById('galleryModalTitle').textContent;
+            link.click();
+        }
+
+        // Load more functionality
+        let currentGalleryPage = 1;
+        const loadMoreGalleryBtn = document.getElementById('loadMoreGalleryBtn');
+
+        loadMoreGalleryBtn.addEventListener('click', function() {
+            loadMoreGalleryBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Memuat...';
+            
+            setTimeout(() => {
+                // Simulate loading more content
+                loadMoreGalleryBtn.innerHTML = '<i class="fas fa-plus me-2"></i>Muat Lebih Banyak';
+                currentGalleryPage++;
+                
+                if (currentGalleryPage >= 3) {
+                    loadMoreGalleryBtn.style.display = 'none';
+                }
+            }, 1000);
+        });
+
+        // Add hover effects to gallery cards
+        document.querySelectorAll('.gallery-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+                this.style.boxShadow = '0 8px 25px rgba(30, 144, 255, 0.3)';
+            });
+
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.1)';
+            });
+        });
+    </script>
+    </body>
+</html>
