@@ -923,3 +923,428 @@ html {
 .gallery-item:nth-child(6) { animation-delay: 0.6s; }
 .gallery-item:nth-child(7) { animation-delay: 0.7s; }
 .gallery-item:nth-child(8) { animation-delay: 0.8s; }
+
+/* Social Media Posts Section */
+.social-post-card {
+    background: linear-gradient(135deg, #181f2f 0%, #101c2c 100%);
+    border-radius: 20px;
+    padding: 1.5rem;
+    border: 1px solid rgba(30, 144, 255, 0.2);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.social-post-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #1e2a3a 0%, #15202b 100%);
+    border-color: rgba(30, 144, 255, 0.4);
+}
+
+.social-post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(30, 144, 255, 0.2);
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.social-icon.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.social-icon.tiktok {
+    background: linear-gradient(45deg, #000000 0%, #ff0050 50%, #00f2ea 100%);
+}
+
+.social-post-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.social-post-preview {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    aspect-ratio: 1;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(30, 144, 255, 0.1);
+}
+
+.preview-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.preview-loading {
+    text-align: center;
+    color: #6c757d;
+}
+
+.preview-loading i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #1e90ff;
+}
+
+.preview-loading p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.preview-embed {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 15px;
+    background: #000;
+    min-height: 300px;
+}
+
+/* Instagram embed specific styling */
+.preview-container[data-platform="instagram"] .preview-embed {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+/* TikTok embed specific styling */
+.preview-container[data-platform="tiktok"] .preview-embed {
+    background: linear-gradient(45deg, #000000 0%, #ff0050 50%, #00f2ea 100%);
+}
+
+/* Instagram Preview Card */
+.instagram-preview-card {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.instagram-preview-card:hover {
+    transform: scale(1.02);
+}
+
+.instagram-preview-header {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.instagram-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-right: 12px;
+}
+
+.instagram-info strong {
+    display: block;
+    font-size: 14px;
+    color: #262626;
+}
+
+.instagram-info span {
+    font-size: 12px;
+    color: #8e8e8e;
+}
+
+.instagram-preview-image {
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.instagram-placeholder {
+    text-align: center;
+    color: #8e8e8e;
+}
+
+.instagram-placeholder i {
+    font-size: 3rem;
+    margin-bottom: 8px;
+    color: #c7c7c7;
+}
+
+.instagram-placeholder p {
+    margin: 0 0 4px 0;
+    font-weight: 600;
+}
+
+.instagram-placeholder small {
+    font-size: 11px;
+}
+
+.instagram-preview-actions {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    gap: 16px;
+}
+
+.instagram-preview-actions i {
+    font-size: 20px;
+    color: #262626;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.instagram-preview-actions i:hover {
+    color: #8e8e8e;
+}
+
+/* TikTok Preview Card */
+.tiktok-preview-card {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    color: white;
+}
+
+.tiktok-preview-card:hover {
+    transform: scale(1.02);
+}
+
+.tiktok-preview-header {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid #333;
+}
+
+.tiktok-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #000000 0%, #ff0050 50%, #00f2ea 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-right: 12px;
+}
+
+.tiktok-info strong {
+    display: block;
+    font-size: 14px;
+    color: white;
+}
+
+.tiktok-info span {
+    font-size: 12px;
+    color: #ccc;
+}
+
+.tiktok-preview-video {
+    aspect-ratio: 9/16;
+    background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.tiktok-placeholder {
+    text-align: center;
+    color: #ccc;
+    position: relative;
+}
+
+.tiktok-placeholder i {
+    font-size: 3rem;
+    margin-bottom: 8px;
+    color: #666;
+}
+
+.tiktok-placeholder p {
+    margin: 0 0 4px 0;
+    font-weight: 600;
+}
+
+.tiktok-placeholder small {
+    font-size: 11px;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 0, 80, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+    margin-top: 20px;
+}
+
+.tiktok-preview-actions {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    gap: 16px;
+}
+
+.tiktok-preview-actions i {
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.tiktok-preview-actions i:hover {
+    color: #ff0050;
+}
+
+.preview-fallback {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1e2a3a 0%, #15202b 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+.preview-fallback i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+.preview-fallback.instagram i {
+    color: #e4405f;
+}
+
+.preview-fallback.tiktok i {
+    color: #ff0050;
+}
+
+.preview-fallback p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.social-post-text {
+    flex: 1;
+}
+
+.social-post-text p {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.social-post-footer {
+    margin-top: auto;
+    padding-top: 1rem;
+}
+
+.social-post-footer .btn {
+    width: 100%;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.social-post-footer .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Social media buttons styling */
+.btn-primary {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) !important;
+    border: none !important;
+    color: white !important;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(45deg, #e6683c 0%, #dc2743 25%, #cc2366 50%, #bc1888 75%, #8a3ab9 100%) !important;
+}
+
+.btn-outline-primary {
+    border: 2px solid #1e90ff !important;
+    color: #1e90ff !important;
+    background: transparent !important;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background: #1e90ff !important;
+    color: white !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(30, 144, 255, 0.3);
+}
+
+/* Social posts responsive */
+@media (max-width: 768px) {
+    .social-post-card {
+        margin-bottom: 2rem;
+    }
+    
+    .social-post-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .social-post-header small {
+        align-self: flex-end;
+    }
+    
+    .preview-fallback i {
+        font-size: 2rem;
+    }
+    
+    .preview-fallback p {
+        font-size: 0.8rem;
+    }
+}
